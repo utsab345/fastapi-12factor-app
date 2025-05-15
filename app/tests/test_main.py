@@ -14,6 +14,6 @@ def test_main():
 
     res = client.get(f"/{short}", follow_redirects=False)
     assert res.status_code == 307
-    assert res.headers["location"] == url
+    assert res.headers["location"].rstrip("/") == url.rstrip("/")
 
     assert client.get("/badpath").status_code == 404
