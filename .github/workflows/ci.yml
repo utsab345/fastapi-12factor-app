@@ -23,6 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install linters
+      run: |
+        pip install black isort flake8
+
     - name: Run linters
       run: |
         black --check .

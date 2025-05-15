@@ -1,4 +1,3 @@
-
 import os
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -9,12 +8,11 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-engine = create_engine(
-    DATABASE_URL, connect_args={"check_same_thread": False}
-)
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
 Base = declarative_base()
 DBSession = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
 
 def get_db_session():
     db: Session = DBSession()
@@ -22,6 +20,7 @@ def get_db_session():
         yield db
     finally:
         db.close()
+
 
 class ShortenedUrl(Base):
     __tablename__ = "shortened_urls"
