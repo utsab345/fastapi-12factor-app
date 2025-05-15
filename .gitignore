@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env/
+.idea/
+.vscode/
+dist/
+build/
+myenv/
+app.db
