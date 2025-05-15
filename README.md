@@ -1,8 +1,10 @@
 # 🔗 FastAPI URL Shortener
+![CI](https://github.com/utsab345/fastapi-12factor-app/actions/workflows/ci.yml/badge.svg)
+
 
 A simple and efficient URL shortener built with ⚡ **FastAPI**, 🐍 **Python**, and 🛢️ **SQLAlchemy**.
 
-This app lets you convert long URLs into short ones and redirect users from those short links back to the original site — similar to services like Bitly or TinyURL.
+This app lets you convert long URLs into short ones and redirect users from those short links back to the original site  similar to services like Bitly or TinyURL.
 
 ---
 
