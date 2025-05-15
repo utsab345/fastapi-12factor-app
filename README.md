@@ -1,7 +1,4 @@
 # 🔗 FastAPI URL Shortener
-[![CI](https://github.com/utsab345/fastapi-12factor-app/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/utsab345/fastapi-12factor-app/actions/workflows/ci.yml)
-
-
 
 A simple and efficient URL shortener built with ⚡ **FastAPI**, 🐍 **Python**, and 🛢️ **SQLAlchemy**.
 
