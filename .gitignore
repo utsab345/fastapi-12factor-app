@@ -11,3 +11,4 @@ dist/
 build/
 myenv/
 app.db
+.flake8
