@@ -36,7 +36,5 @@ def redirect(short_link: str, db: Session = Depends(get_db_session)):
         .first()
     )
     if obj is None:
-        raise HTTPException(
-            status_code=404, detail="The link does not exist, could not redirect."
-        )
+        raise HTTPException(status_code=404, detail="The link does not exist.")
     return RedirectResponse(url=obj.original_url)
