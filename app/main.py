@@ -1,10 +1,11 @@
 from datetime import datetime, timezone
+
 from fastapi import Body, Depends, FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
 from pydantic import HttpUrl
 from sqlalchemy.orm import Session
 
-from .database import ShortenedUrl, get_db_session, Base, engine
+from .database import Base, ShortenedUrl, engine, get_db_session
 from .service import create_short_link
 
 Base.metadata.create_all(bind=engine)
